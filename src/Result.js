@@ -7,10 +7,9 @@ class Result extends React.Component {
         
         return(
             <div class="split_right">
-                <table>
-                    <tr>
+                <div>
                         {output.map(element => (
-                            <td>
+                            <div class="div-table">
                                 <img src={element["links"]["mission_patch_small"]} />
                                 <h3>Mission ids:</h3>
                                 <label>{element["mission_id"]}</label>
@@ -20,10 +19,9 @@ class Result extends React.Component {
 
                                 <h3>Launch Success</h3>
                                 <label>{element["launch_success"]}</label>
-                            </td>
+                            </div>
                         ))}
-                     </tr>
-                </table>
+                </div>
             </div>
         )
     }

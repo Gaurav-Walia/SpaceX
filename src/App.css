@@ -57,7 +57,6 @@
   overflow-x: hidden;
   padding-top: 20px;
   right: 0;
-  overflow-x: auto;
 }
 
 /* Control the left side */
@@ -70,12 +69,14 @@
   right: 0;
 }
 
-.resultFilter {
-  overflow-x:auto;
-}
 
 .filterButton {
   padding: 8px;
   margin: 5px;
   background: green;
+}
+
+.div-table {
+  display: inline-block;
+  padding: 35px;
 }
