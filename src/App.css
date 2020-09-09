@@ -37,14 +37,27 @@
   }
 }
 
-.split {
+.split_left {
   height: 100%;
-  width: 50%;
+  width: 20%;
   position: fixed;
   z-index: 1;
   top: 0;
   overflow-x: hidden;
   padding-top: 20px;
+  left: 0;
+}
+
+.split_right {
+  height: 100%;
+  width: 80%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+  right: 0;
+  overflow-x: auto;
 }
 
 /* Control the left side */
@@ -55,4 +68,14 @@
 /* Control the right side */
 .right {
   right: 0;
+}
+
+.resultFilter {
+  overflow-x:auto;
+}
+
+.filterButton {
+  padding: 8px;
+  margin: 5px;
+  background: green;
 }
