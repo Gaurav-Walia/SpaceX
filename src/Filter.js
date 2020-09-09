@@ -8,7 +8,7 @@ class Filter extends React.Component {
     }
 
     handleClick(event) {
-        event.preventDefault();
+        // event.preventDefault();
         this.props.onFilterUpdate(event.target.name, event.target.value);
     }
 
@@ -17,8 +17,8 @@ class Filter extends React.Component {
 
         return(
             <div class="split_left">
-                <h2>Space X Launch Programs</h2>
-                <h2>Filters</h2>
+                <h2 className="filterHead">Space X Launch Programs</h2>
+                <h2 className="filterHead">Filters</h2>
                 <div class="year-filter">
                     <h3>Launch Year</h3>
                     { years.map(year => <button name="launch_year" value={year} className="filterButton" onClick={this.handleClick}>{year}</button> )}
