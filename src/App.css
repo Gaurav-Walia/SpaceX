@@ -113,15 +113,36 @@
   }
 }
 
-@media only screen and (max-width: 640px) {
-  /* For phone: */
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+  /* For mobile: */
+  .div-table {
+    display: inline-block;
+    padding: 20px;
+  }
+  
+  img {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 150px;
+  }
+}
+
+@media only screen and (min-width: 700px) and (max-width: 1024px) {
+  /* For tablet: */
   .div-table {
     display: inline-block;
     padding: 35px;
   }
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and ((min-width: 1024px) and (max-width: 1440px) {
   /* For desktop: */
   .div-table {
     display: inline-block;
