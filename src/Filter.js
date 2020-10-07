@@ -15,10 +15,10 @@ class Filter extends React.Component {
         let years = [2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020];
 
         return(
-            <div class="split_left">
+            <div className="split_left">
                 <h2 className="filterHead">Space X Launch Programs</h2>
                 <h2 className="filterHead">Filters</h2>
-                <div class="year-filter">
+                <div className="year-filter">
                     <h3>Launch Year</h3>
                     { years.map(year => <button name="launch_year" value={year} className="filterButton" onClick={this.handleClick}>{year}</button> )}
                 </div>

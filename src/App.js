@@ -40,8 +40,8 @@ class App extends React.Component {
 
   render() {
     return (
-      <div class="container">
-        <div class="row">
+      <div className="container">
+        <div className="row">
           <Filter onFilterUpdate = {this.handleClick} />
           <Result output={this.state.output} />
         </div>
