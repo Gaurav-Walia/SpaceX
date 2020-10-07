@@ -8,7 +8,6 @@ class Filter extends React.Component {
     }
 
     handleClick(event) {
-        // event.preventDefault();
         this.props.onFilterUpdate(event.target.name, event.target.value);
     }
 

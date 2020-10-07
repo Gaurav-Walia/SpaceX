@@ -27,29 +27,8 @@ class App extends React.Component {
     }
 
   handleClick(key, value) {
-    let query = "";
-    if (key === "launch_year") { this.setState({ launch_year: value }); }
-    else if (key === "launch_success") { this.setState({ launch_success: value }); }
-    else if (key === "land_success") { this.setState({ land_success: value }); } 
-    else { this.setState({ launch_year: 2014, launch_success: true, land_success: true  }); }
-
-    if (this.state.launch_year && this.state.launch_success && this.state.land_success) {
-      query = "&launch_year=" + this.state.launch_year + "&launch_success=" + this.state.launch_success + "&land_success=" + this.state.land_success;
-    } 
-
-    else if (this.state.launch_year) {
-      query = "&launch_year=" + this.state.launch_year;
-    }
-
-    else if (this.state.launch_success) {
-      query = "&launch_success=" + this.state.launch_success;
-    }
-    
-    else if (this.state.launch_success) {
-      query = "&land_success=" + this.state.land_success;
-    } 
-
-    console.log(query);
+    let query = "&" + key + "=" + value;
+   
     fetch(`https://api.spaceXdata.com/v3/launches?limit=100` + query)
         .then(res => res.json())
         .then(result => {
