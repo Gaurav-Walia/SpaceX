@@ -18,7 +18,8 @@ class Result extends React.Component {
                                 <label>{element["launch_year"]}</label>
 
                                 <h3>Launch Success</h3>
-                                <label>{element["launch_success"]}</label>
+                                { console.log(element["launch_success"]) }
+                                <label>{element["launch_success"] === true ? "Yes" : "No" }</label>
                             </div>
                         ))}
                 </div>
