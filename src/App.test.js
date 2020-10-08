@@ -18,4 +18,31 @@ describe('App Component', () => {
     spy.mockReset();
     spy.mockRestore();
   });
+
+  it('test the state objects is set to null', done => { 
+    const mockSuccessResponse = {};
+    const mockJsonPromise = Promise.resolve(mockSuccessResponse); 
+    const mockFetchPromise = Promise.resolve({ 
+      json: () => mockJsonPromise,
+    });
+    jest.spyOn(global, 'fetch').mockImplementation(() => mockFetchPromise); 
+    
+    const wrapper = shallow(<App />); 
+                            
+    expect(global.fetch).toHaveBeenCalledTimes(1);
+    expect(global.fetch).toHaveBeenCalledWith('https://api.spaceXdata.com/v3/launches?limit=100');
+
+    process.nextTick(() => { 
+      expect(wrapper.state()).toEqual({
+          "land_success": null,
+          "launch_success": null,
+          "launch_year": null,
+          "output": {}
+      });
+
+      global.fetch.mockClear(); 
+      done(); 
+    });
+  });
 });
+
