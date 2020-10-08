@@ -83,6 +83,11 @@
 .div-table {
   display: inline-block;
   padding: 35px;
+  /* background-color: white; */
+}
+
+.mission_tray {
+  /* background-color: aqua; */
 }
 
 /* For mobile phones: */

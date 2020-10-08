@@ -1,4 +1,5 @@
 import React from 'react';
+import { withRouter } from 'react-router'
 import './App.css';
 import Filter from './Filter';
 import Result from './Result';
@@ -50,4 +51,4 @@ class App extends React.Component {
   }
 }
 
-export default App;
+export default withRouter(App);

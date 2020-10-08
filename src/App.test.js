@@ -19,7 +19,7 @@ describe('App Component', () => {
     spy.mockRestore();
   });
 
-  it('test the state objects is set to null', done => { 
+  it('initial state object is set to null', done => { 
     const mockSuccessResponse = {};
     const mockJsonPromise = Promise.resolve(mockSuccessResponse); 
     const mockFetchPromise = Promise.resolve({ 
@@ -31,6 +31,7 @@ describe('App Component', () => {
                             
     expect(global.fetch).toHaveBeenCalledTimes(1);
     expect(global.fetch).toHaveBeenCalledWith('https://api.spaceXdata.com/v3/launches?limit=100');
+    
 
     process.nextTick(() => { 
       expect(wrapper.state()).toEqual({
