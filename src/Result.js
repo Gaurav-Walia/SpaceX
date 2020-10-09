@@ -23,7 +23,9 @@ class Result extends React.Component {
                                 <h3>Successful Landing:</h3>
                                 <label>{element["rocket"]["first_stage"]["cores"][0]["land_success"] === true ? "Yes" : "No" }</label>
                             </div>
+                            
                         ))}
+                        <footer className="footer">Developed By: Gaurav Walia</footer>
                 </div>
             </div>
         )

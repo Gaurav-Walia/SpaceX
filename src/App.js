@@ -43,10 +43,14 @@ class App extends React.Component {
     return (
       <div className="container">
         <div className="row">
+          <header style={{ textAlign: "center", fontSize: "xx-large" }}>Space X Launch Programs</header>
+        </div>
+
+        <div className="row">
           <Filter onFilterUpdate = {this.handleClick} />
           <Result output={this.state.output} />
         </div>
-    </div>
+      </div>
     )
   }
 }

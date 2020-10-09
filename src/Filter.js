@@ -16,7 +16,6 @@ class Filter extends React.Component {
 
         return(
             <div className="split_left">
-                <h2 className="filterHead">Space X Launch Programs</h2>
                 <h2 className="filterHead">Filters</h2>
                 <div className="year-filter">
                     <h3>Launch Year</h3>
