@@ -1,3 +1,8 @@
+body, html{
+  height: 100%;
+}
+
+
 .App {
   text-align: center;
 }
@@ -40,12 +45,8 @@
 .split_left {
   height: 100%;
   width: 20%;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  overflow-x: hidden;
+  float: left;
   padding-top: 20px;
-  left: 0;
 }
 
 .filterHead {
@@ -55,12 +56,9 @@
 .split_right {
   height: 100%;
   width: 80%;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  overflow-x: hidden;
+  float: right;
   padding-top: 50px;
-  right: 0;
+ 
 }
 
 /* Control the left side */
@@ -99,40 +97,23 @@
 
 .div-table {
   display: inline-block;
-  padding: 35px;
-  /* background-color: white; */
+  padding: 35px 15px;
+  width: 25%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -moz-box-sizing: borde-box;
 }
+
+.div-table img {
+
+  max-width: 100%;
+
+}
+
 
 .mission_tray {
-  /* background-color: aqua; */
-}
-
-/* For mobile phones: */
-[class*="col-"] {
+  float: left;
   width: 100%;
-}
-
-@media only screen and (min-width: 600px) {
-  /* For tablet: */
-  .div-table {
-    display: inline-block;
-    padding: 20px;
-  }
-
-  .split_left {
-    height: 100%;
-    width: 20%;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    overflow-x: hidden;
-    padding-top: 20px;
-    left: 0;
-  }
-
-  .filterHead {
-    font-size: 1em;
-  }
 }
 
 .responsive {
@@ -141,34 +122,35 @@
   width: 24.99999%;
 }
 
+
+
 @media only screen and (max-width: 700px) {
-  /* For mobile: */
-  .div-table {
-    display: inline-block;
-    padding: 20px;
+
+  .split_left {
+    width: 100%;
+    padding:0 10px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -moz-box-sizing: borde-box;
   }
+  .split_right {
+    width: 100%;
+}
+.div-table {
+  width: 100%;
   
-  img {
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    padding: 5px;
-    width: 150px;
+}
+
+}
+
+@media only screen and (min-width: 701px) and (max-width: 1024px) {
+  .div-table {
+  
+    width: 50%;
   }
 }
 
-@media only screen and (min-width: 700px) and (max-width: 1024px) {
-  /* For tablet: */
-  .div-table {
-    display: inline-block;
-    padding: 35px;
-  }
-}
-
-@media only screen and ((min-width: 1024px) and (max-width: 1440px) {
-  /* For desktop: */
-  .div-table {
-    display: inline-block;
-    padding: 35px;
-  }
+@media only screen and (min-width: 1025px) and (max-width: 1440px) {
+ 
 }
 
