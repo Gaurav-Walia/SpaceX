@@ -2,7 +2,6 @@ body, html{
   height: 100%;
 }
 
-
 .App {
   text-align: center;
 }
@@ -105,9 +104,7 @@ body, html{
 }
 
 .div-table img {
-
   max-width: 100%;
-
 }
 
 
@@ -135,17 +132,15 @@ body, html{
   }
   .split_right {
     width: 100%;
-}
-.div-table {
-  width: 100%;
-  
-}
-
+  }
+  .div-table {
+    width: 100%;
+    
+  }
 }
 
 @media only screen and (min-width: 701px) and (max-width: 1024px) {
   .div-table {
-  
     width: 50%;
   }
 }

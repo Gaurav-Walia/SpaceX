@@ -24,3 +24,10 @@ The application is deployed on Heroku - https://misson-spacex.herokuapp.com/
 
 The project user interface is responsive and is available on mobile, tablet and desktop view.
 
+	Mobile View: Page have only one Column until 700 px.
+
+	Tablet View: Page have 2 columns between 700 and 1024 px. 
+
+	Desktop View: Page have 4 columns between 1024 and 1440 px.
+
+
